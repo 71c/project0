@@ -12,7 +12,8 @@ var score;
 var font;
 
 function setup() {
-  createCanvas(570, 450);
+  var canvas = createCanvas(570, 450);
+  canvas.parent('right');
   rows = 15;
   cols = 19;
   direction = "right";
