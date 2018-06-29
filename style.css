@@ -6,6 +6,8 @@ div {
     /*border: 5px solid gray;*/
     margin: 0;
 }
+
+/*this is a "pseudoclass": temporary state. you can't create your own they come with browser*/
 a:hover {
     background-color: yellow;
 }
@@ -14,21 +16,7 @@ a {
     text-decoration: none;
 }
 
-
-/*#sides{*/
-/*margin:0;*/
-/*}*/
-/*#left{*/
-/*float:left;*/
-/*width:500;*/
-/*overflow:hidden;*/
-/*}*/
-/*#right{*/
-/*float:left;*/
-/*width:75%;*/
-/*overflow:hidden;*/
-/*}*/
-
+/* I used this resource: https://stackoverflow.com/questions/17217766/two-divs-side-by-side-fluid-display */
 #left {
   float: left;
   width: 25%;
@@ -38,3 +26,20 @@ a {
 #right {
   overflow: hidden;
 }
+
+
+/*@media (min-width: 500px)*/
+/*{*/
+/*    body*/
+/*    {*/
+/*        background-color: red;*/
+/*    }*/
+/*}*/
+
+/*@media (max-width: 499px)*/
+/*{*/
+/*    body*/
+/*    {*/
+/*        background-color: blue;*/
+/*    }*/
+/*}*/
