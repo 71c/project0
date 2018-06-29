@@ -1,32 +1,23 @@
-var cols;
-var rows;
-var direction;
-var row;
-var col;
-var draws;
-var snakeLength;
-var snake;
+var cols = 19;
+var rows = 15;
+var direction = "right";
+var row = 7;
+var col = 9;
+var draws = 0;
+var snakeLength = 3;
+var snake = [];
+var gameOver = false;
 var egg;
-var gameOver;
 var score;
-var font;
 
 function setup() {
   var canvas = createCanvas(570, 450);
-  canvas.parent('right');
-  rows = 15;
-  cols = 19;
-  direction = "right";
-  row = 7;
-  col = 9;
-  draws = 0;
-  snakeLength = 3;
-  snake = [];
+  canvas.parent("right");
   snake.push([col - 2, row]);
   snake.push([col - 1, row]);
   snake.push([col, row]);
   egg = [int(random(cols)), int(random(rows))];
-  gameOver = false;
+  textSize(30);
 }
 
 function draw() {
@@ -45,13 +36,13 @@ function draw() {
         col--;
       else if (direction == "right")
         col++;
+
       if(col == egg[0] && row == egg[1]) {
         egg = [int(random(cols)), int(random(rows))];
         snakeLength++;
       }
 
-      if(col < 0 || col > 18 || row < 0 || row > 14)
-        gameOver = true;
+      gameOver = col < 0 || col >= cols || row < 0 || row >= rows;
 
       if(snake.length == snakeLength)
         snake.splice(0, 1);
@@ -62,9 +53,13 @@ function draw() {
           gameOver = true;
       }
     }
+
+    // draw snake
     for (let pos of snake) {
       rect(pos[0] * width / cols, pos[1] * height / rows, width / cols, height / rows);
     }
+
+    // draw egg
     rect(egg[0] * width / cols, egg[1] * height / rows, width / cols, height / rows);
 
     fill(255);
