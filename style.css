@@ -4,23 +4,26 @@ div {
     /*width: 25%;*/
     /*padding: 10px;*/
     /*border: 5px solid gray;*/
-    margin: 0;
+    /*margin: 0;*/
 }
 
 /*this is a "pseudoclass": temporary state. you can't create your own they come with browser*/
 a:hover {
     background-color: yellow;
-}
-a {
     color: black;
     text-decoration: none;
+}
+a {
+    text-decoration: none;
+    color: black;
 }
 
 /* I used this resource: https://stackoverflow.com/questions/17217766/two-divs-side-by-side-fluid-display */
 #left {
   float: left;
-  width: 25%;
+  width: 300px;
   overflow: hidden;
+  margin: 20px;
 }
 
 #right {
@@ -28,18 +31,18 @@ a {
 }
 
 
-/*@media (min-width: 500px)*/
+/*@media (min-width: 1000px)*/
 /*{*/
-/*    body*/
+/*    img*/
 /*    {*/
-/*        background-color: red;*/
+/*        width: 500;*/
 /*    }*/
 /*}*/
 
-/*@media (max-width: 499px)*/
+/*@media (max-width: 999px)*/
 /*{*/
-/*    body*/
+/*    img*/
 /*    {*/
-/*        background-color: blue;*/
+/*        width: 100%;*/
 /*    }*/
 /*}*/
