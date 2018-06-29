@@ -8,6 +8,10 @@ a, a:hover {
     color: black;
 }
 
+a[href^="http"], a[href^="mailto"] {
+    color: blue;
+}
+
 /* I used this resource: https://stackoverflow.com/questions/17217766/two-divs-side-by-side-fluid-display */
 #left {
   float: left;
