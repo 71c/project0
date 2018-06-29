@@ -1,15 +1,9 @@
-
-/*this is a "pseudoclass": temporary state. you can't create your own they come with browser*/
-a:hover, #selected {
+div[id="left"] a:hover, #selected {
     background-color: yellow;
 }
-a, a:hover {
+div[id="left"] a {
     text-decoration: none;
     color: black;
-}
-
-a[href^="http"], a[href^="mailto"] {
-    color: blue;
 }
 
 /* I used this resource: https://stackoverflow.com/questions/17217766/two-divs-side-by-side-fluid-display */
@@ -18,6 +12,7 @@ a[href^="http"], a[href^="mailto"] {
   width: 300px;
   overflow: hidden;
 }
+
 
 #right {
   overflow: hidden;
