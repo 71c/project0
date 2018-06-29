@@ -1,10 +1,6 @@
 div {
     font-family: Helvetica Neue, sans-serif;
     color: black;
-    /*width: 25%;*/
-    /*padding: 10px;*/
-    /*border: 5px solid gray;*/
-    /*margin: 0;*/
 }
 
 /*this is a "pseudoclass": temporary state. you can't create your own they come with browser*/
@@ -23,26 +19,14 @@ a {
   float: left;
   width: 300px;
   overflow: hidden;
-  margin: 20px;
+  /*margin: 30px;*/
 }
 
 #right {
   overflow: hidden;
+  margin: 20px;
 }
 
-
-/*@media (min-width: 1000px)*/
-/*{*/
-/*    img*/
-/*    {*/
-/*        width: 500;*/
-/*    }*/
-/*}*/
-
-/*@media (max-width: 999px)*/
-/*{*/
-/*    img*/
-/*    {*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
+#selected {
+    background-color: yellow;
+}
