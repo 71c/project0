@@ -1,7 +1,3 @@
-/*div {*/
-/*    font-family: Helvetica, sans-serif;*/
-/*    color: black;*/
-/*}*/
 
 /*this is a "pseudoclass": temporary state. you can't create your own they come with browser*/
 a:hover, #selected {
