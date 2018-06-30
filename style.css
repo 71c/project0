@@ -1,3 +1,9 @@
+
+div {
+  /*font-family: "Times New Roman", Times, serif;*/
+  /*font-family: Helvetica Neue;*/
+}
+
 div[id="left"] a {
   text-decoration: none;
   color: black; }
@@ -9,7 +15,7 @@ div[id="left"] a:hover, div[id="left"] #selected {
   float: left;
   width: 300px;
   overflow: hidden;
-  margin-left: 20px; }
+  margin-left: 20px;}
 
 #right {
   overflow: hidden;

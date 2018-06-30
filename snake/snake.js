@@ -3,7 +3,6 @@ var rows = 15;
 var direction = "right";
 var row = 7;
 var col = 9;
-var draws = 0;
 var startingSnakeLength = 3;
 var snakeLength = startingSnakeLength;
 var snake = [];
@@ -21,6 +20,7 @@ function setup() {
   textSize(30);
   strokeWeight(4);
   stroke(114);
+  frameRate(7);
 }
 
 function drawSquare(pos) {
@@ -29,44 +29,43 @@ function drawSquare(pos) {
 
 function draw() {
   background(114);
-  if (! gameOver) {
-    draws++;
-    if (draws % 9 === 0) {
-      if (direction === "up")
-        row--;
-      else if (direction === "down")
-        row++;
-      else if (direction === "left")
-        col--;
-      else if (direction === "right")
-        col++;
+  if (direction === "up")
+    row--;
+  else if (direction === "down")
+    row++;
+  else if (direction === "left")
+    col--;
+  else if (direction === "right")
+    col++;
 
-      if(col === egg[0] && row === egg[1]) {
-        egg = [int(random(cols)), int(random(rows))];
-        snakeLength++;
-      }
+  if(col === egg[0] && row === egg[1]) {
+    egg = [int(random(cols)), int(random(rows))];
+    snakeLength++;
+  }
 
-      if (snake.length === snakeLength)
-        snake.splice(0, 1);
+  if (snake.length === snakeLength)
+    snake.splice(0, 1);
 
-      var headOnEdge = col < 0 || col >= cols || row < 0 || row >= rows;
-      var headOnSelf = snake.some(element => element[0] === col && element[1] === row);
-      gameOver = headOnEdge || headOnSelf;
+  var headOnEdge = col < 0 || col >= cols || row < 0 || row >= rows;
+  var headOnSelf = snake.some(element => element[0] === col && element[1] === row);
+  gameOver = headOnEdge || headOnSelf;
 
-      snake.push([col, row]);
-    }
+  snake.push([col, row]);
 
-    fill(0);
-    for (let pos of snake) {
-      drawSquare(pos);
-    }
-    drawSquare(egg);
+  fill(0);
+  snake.forEach(v => {
+   drawSquare(v)
+  });
+  drawSquare(egg);
 
+  if (gameOver) {
+    // text("Game Over. Score: " + score + ", efficiency: " + Math.round(score / frameCount * 100) / 100, 10, 30); // Should I add this? Probably not. I'll keep it here anyway.
+    text("Game Over. Score: " + score, 10, 30);
+    noLoop();
+  } else {
     fill(255);
     score = snakeLength - startingSnakeLength;
     text("score: " + score, 10, 30);
-  } else {
-    text("Game Over. Score: " + score, 10, 30);
   }
 }
 
