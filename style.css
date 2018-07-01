@@ -14,4 +14,13 @@
   overflow: hidden;
   margin: 20px; }
 
+th, td {
+  /* learned about this syntax at https://www.w3schools.com/Css/css_padding.asp */
+  padding: 10px 15px 10px 15px; }
+
+table, th, td {
+  border: 1px solid black; }
+  table #center, th #center, td #center {
+    text-align: center; }
+
 /*# sourceMappingURL=style.css.map */
