@@ -1,14 +1,18 @@
+.menu a, .mini-menu a, #left a {
+  text-decoration: none;
+  color: black; }
+.menu a:hover, .mini-menu a:hover, #left a:hover, .menu #selected, .mini-menu #selected, #left #selected {
+  background-color: yellow; }
+
+.mini-menu a:hover, .mini-menu #selected {
+  background-color: red; }
+
 /* I used this resource: https://stackoverflow.com/questions/17217766/two-divs-side-by-side-fluid-display */
 #left {
   float: left;
   width: 300px;
   overflow: hidden;
   margin-left: 20px; }
-  #left a {
-    text-decoration: none;
-    color: black; }
-  #left a:hover, #left #selected {
-    background-color: yellow; }
 
 #right {
   overflow: hidden;

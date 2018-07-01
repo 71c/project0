@@ -1,32 +1,35 @@
 $sidebar_width: 300px;
 
+.menu {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    a:hover, #selected {
+        background-color: yellow;
+    }
+}
+
+.mini-menu {
+    @extend .menu;
+    a:hover, #selected {
+        background-color: red;
+    }
+}
+
 /* I used this resource: https://stackoverflow.com/questions/17217766/two-divs-side-by-side-fluid-display */
+
 #left {
-  float: left;
-  width: $sidebar_width;
-  overflow: hidden;
-  margin-left: 20px;
-  a {
-      text-decoration: none;
-      color: black;
-  }
-  a:hover, #selected {
-      background-color: yellow;
-  }
-//   a:active {
-//       background-color: blue;
-//   }
-//   a:hover {
-//       background-color: yellow;
-//   }
-//   #selected {
-//       color: blue;
-//   }
+    @extend .menu;
+    float: left;
+    width: $sidebar_width;
+    overflow: hidden;
+    margin-left: 20px;
 }
 
 #right {
-  overflow: hidden;
-  margin: 20px;
+    overflow: hidden;
+    margin: 20px;
 }
 
 th, td {
@@ -40,9 +43,3 @@ table, th, td {
         text-align: center;
     }
 }
-
-
-
-
-
-
