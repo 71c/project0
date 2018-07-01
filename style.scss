@@ -1,19 +1,27 @@
-div[id="left"] {
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    a:hover, #selected {
-        background-color: yellow;
-    }
-}
+$sidebar_width: 300px;
 
 /* I used this resource: https://stackoverflow.com/questions/17217766/two-divs-side-by-side-fluid-display */
 #left {
   float: left;
-  width: 300px;
+  width: $sidebar_width;
   overflow: hidden;
   margin-left: 20px;
+  a {
+      text-decoration: none;
+      color: black;
+  }
+  a:hover, #selected {
+      background-color: yellow;
+  }
+//   a:active {
+//       background-color: blue;
+//   }
+//   a:hover {
+//       background-color: yellow;
+//   }
+//   #selected {
+//       color: blue;
+//   }
 }
 
 #right {
@@ -21,8 +29,17 @@ div[id="left"] {
   margin: 20px;
 }
 
+th, td {
+    /* learned about this syntax at https://www.w3schools.com/Css/css_padding.asp */
+    padding: 10px 15px 10px 15px;
+}
 
-
+table, th, td {
+    border: 1px solid black;
+    #center {
+        text-align: center;
+    }
+}
 
 
 

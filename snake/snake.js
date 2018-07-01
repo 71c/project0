@@ -1,6 +1,6 @@
 var cols = 19;
 var rows = 15;
-var direction = "right";
+var direction = "R";
 var row = 7;
 var col = 9;
 var startingSnakeLength = 3;
@@ -29,16 +29,16 @@ function drawSquare(pos) {
 
 function draw() {
   background(114);
-  if (direction === "up")
+  if (direction === "U")
     row--;
-  else if (direction === "down")
+  else if (direction === "D")
     row++;
-  else if (direction === "left")
+  else if (direction === "L")
     col--;
-  else if (direction === "right")
+  else if (direction === "R")
     col++;
 
-  if(col === egg[0] && row === egg[1]) {
+  if (col === egg[0] && row === egg[1]) {
     egg = [int(random(cols)), int(random(rows))];
     snakeLength++;
   }
@@ -47,35 +47,34 @@ function draw() {
     snake.splice(0, 1);
 
   var headOnEdge = col < 0 || col >= cols || row < 0 || row >= rows;
-  var headOnSelf = snake.some(element => element[0] === col && element[1] === row);
+  var headOnSelf = snake.some(v => v[0] === col && v[1] === row);
   gameOver = headOnEdge || headOnSelf;
 
   snake.push([col, row]);
 
   fill(0);
   snake.forEach(v => {
-   drawSquare(v)
+   drawSquare(v);
   });
   drawSquare(egg);
 
   if (gameOver) {
-    // text("Game Over. Score: " + score + ", efficiency: " + Math.round(score / frameCount * 100) / 100, 10, 30); // Should I add this? Probably not. I'll keep it here anyway.
-    text("Game Over. Score: " + score, 10, 30);
+    text("Game Over. Score: " + score, width / 57, height / 15);
     noLoop();
   } else {
     fill(255);
     score = snakeLength - startingSnakeLength;
-    text("score: " + score, 10, 30);
+    text("score: " + score, width / 57, height / 15);
   }
 }
 
 function keyPressed() {
-  if (keyCode === UP_ARROW && direction !== "down")
-    direction = "up";
-  else if (keyCode === DOWN_ARROW && direction !== "up")
-    direction = "down";
-  else if (keyCode === LEFT_ARROW && direction !== "right")
-    direction = "left";
-  else if (keyCode === RIGHT_ARROW && direction !== "left")
-    direction = "right";
+  if (keyCode === UP_ARROW && direction !== "D")
+    direction = "U";
+  else if (keyCode === DOWN_ARROW && direction !== "U")
+    direction = "D";
+  else if (keyCode === LEFT_ARROW && direction !== "R")
+    direction = "L";
+  else if (keyCode === RIGHT_ARROW && direction !== "L")
+    direction = "R";
 }
