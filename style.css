@@ -7,6 +7,9 @@
 .mini-menu a:hover, .mini-menu #selected {
   background-color: red; }
 
+.filled-in {
+  background-color: black; }
+
 /* I used this resource: https://stackoverflow.com/questions/17217766/two-divs-side-by-side-fluid-display */
 #left {
   float: left;
@@ -26,5 +29,6 @@ table, th, td {
   border: 1px solid black; }
   table #center, th #center, td #center {
     text-align: center; }
+
 
 /*# sourceMappingURL=style.css.map */
