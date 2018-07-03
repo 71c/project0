@@ -1,9 +1,6 @@
 # Project 0
 
-Web Programming with Python and JavaScript
-
-## about
-This is my website. Info in the desciptions of the files.
+This is my website. I made it as the first project for the physical class ["Web Programming with Python and JavaScript"](https://cs50.github.io/web/).
 
 ## files
 All of the `.html` pages have the same sidebar on them so one can get from any page directly to any other page. The descriptions of the html pages refer to what’s on the right of the sidebar.
