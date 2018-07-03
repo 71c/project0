@@ -6,7 +6,9 @@ This is my website. I made it as the first project for the physical class [“We
 All of the `.html` pages have the same sidebar on them so one can get from any page directly to any other page. The descriptions of the html pages refer to what’s on the right of the sidebar.
 * `images/`
     * `Ap_Creative_Stock_Header.jpg`: image used in the fake news article in `alojaco_news.html`
-    * `buttons.jpg`: image used in the slideshow in `images.html`
+    * `picture2.png`: image used in the slideshow in `images.html`
+    * `picture1.png`: image
+    * `Radial Blurry LInes.jpg`: image used in the slideshow in `images.html`
     * `gray_streaks.jpg`: image used in the slideshow in `mages.html`
     * `SUPER 2 copy 2.png`: image used in the slideshow in `images.html`
 * `styles/`
