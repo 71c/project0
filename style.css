@@ -20,14 +20,14 @@ div {
   overflow: hidden;
   margin-left: 20px; }
 
-@media (min-width: 751px) {
+@media (min-width: 919px) {
   #left {
     width: 300px; }
     #left h4 a {
       font-size: 100%; }
     #left h2 a {
       font-size: 100%; } }
-@media (max-width: 750px) {
+@media (max-width: 918px) {
   #left {
     width: 150px; }
     #left h4 a {

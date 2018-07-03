@@ -6,7 +6,6 @@ div {
 }
 
 
-
 %menu {
     a {
         text-decoration: none;
@@ -31,7 +30,6 @@ div {
 }
 
 /* I used this resource: https://stackoverflow.com/questions/17217766/two-divs-side-by-side-fluid-display */
-
 #left {
     float: left;
     width: $sidebar_width;
@@ -39,7 +37,7 @@ div {
     margin-left: 20px;
 }
 
-@media (min-width: 751px) {
+@media (min-width: 919px) {
     #left {
         width: $sidebar_width;
         h4 a {
@@ -51,7 +49,7 @@ div {
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 918px) {
     #left {
         width: $small_sidebar_width;
         h4 a {
