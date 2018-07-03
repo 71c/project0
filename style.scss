@@ -1,38 +1,66 @@
 $sidebar_width: 300px;
+$small_sidebar_width: 150px;
 
 div {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-.menu {
+
+
+%menu {
     a {
         text-decoration: none;
         color: black;
     }
-    a:hover, #selected {
+}
+
+.nav-menu {
+    @extend %menu;
+    a:hover,
+    #selected {
         background-color: yellow;
     }
 }
 
 .mini-menu {
-    @extend .menu;
-    a:hover, #selected {
+    @extend %menu;
+    a:hover,
+    #selected {
         background-color: red;
     }
-}
-
-.filled-in {
-    background-color: black;
 }
 
 /* I used this resource: https://stackoverflow.com/questions/17217766/two-divs-side-by-side-fluid-display */
 
 #left {
-    @extend .menu;
     float: left;
     width: $sidebar_width;
     overflow: hidden;
     margin-left: 20px;
+}
+
+@media (min-width: 751px) {
+    #left {
+        width: $sidebar_width;
+        h4 a {
+            font-size: 100%;
+        }
+        h2 a {
+            font-size: 100%;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    #left {
+        width: $small_sidebar_width;
+        h4 a {
+            font-size: 75%;
+        }
+        h2 a {
+            font-size: 75%;
+        }
+    }
 }
 
 #right {
@@ -40,12 +68,15 @@ div {
     margin: 20px;
 }
 
-th, td {
+th,
+td {
     /* learned about this syntax at https://www.w3schools.com/Css/css_padding.asp */
     padding: 10px 15px 10px 15px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid black;
     #center {
         text-align: center;

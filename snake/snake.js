@@ -56,6 +56,7 @@ function draw() {
   snake.forEach(v => {
    drawSquare(v);
   });
+  fill(255,0,0);
   drawSquare(egg);
 
   if (gameOver) {

@@ -1,17 +1,17 @@
 div {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif; }
 
-.menu a, .mini-menu a, #left a {
+.nav-menu a, .mini-menu a {
   text-decoration: none;
   color: black; }
-.menu a:hover, .mini-menu a:hover, #left a:hover, .menu #selected, .mini-menu #selected, #left #selected {
+
+.nav-menu a:hover,
+.nav-menu #selected {
   background-color: yellow; }
 
-.mini-menu a:hover, .mini-menu #selected {
+.mini-menu a:hover,
+.mini-menu #selected {
   background-color: red; }
-
-.filled-in {
-  background-color: black; }
 
 /* I used this resource: https://stackoverflow.com/questions/17217766/two-divs-side-by-side-fluid-display */
 #left {
@@ -20,17 +20,36 @@ div {
   overflow: hidden;
   margin-left: 20px; }
 
+@media (min-width: 751px) {
+  #left {
+    width: 300px; }
+    #left h4 a {
+      font-size: 100%; }
+    #left h2 a {
+      font-size: 100%; } }
+@media (max-width: 750px) {
+  #left {
+    width: 150px; }
+    #left h4 a {
+      font-size: 75%; }
+    #left h2 a {
+      font-size: 75%; } }
 #right {
   overflow: hidden;
   margin: 20px; }
 
-th, td {
+th,
+td {
   /* learned about this syntax at https://www.w3schools.com/Css/css_padding.asp */
   padding: 10px 15px 10px 15px; }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black; }
-  table #center, th #center, td #center {
+  table #center,
+  th #center,
+  td #center {
     text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
