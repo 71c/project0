@@ -21,6 +21,6 @@ All of the `.html` pages have the same sidebar on them so one can get from any p
 * `game.html`: holds `snake.js`. The game can’t be played on mobile.
 * `images.html`: uses Bootstrap’s [Carousel](https://getbootstrap.com/docs/4.1/components/carousel/) component to make a slideshow of images with controls.
 * `index.html`: Nothing on it except a "welcome" message and instructions on how to use the website.
-* `projects.html`: There was going to be pictures or writing about "projects" that Alojaco has done but I ended up just putting a table (4 actually; it’s a nested table) there to satisfy the requirement for a table.
 * `README.md`: Includes a short writeup describing my project, what’s contained in each file, and (optionally) any other additional information the staff should know about my project.
 * `snake.js`: a simple snake game made with [p5.js](https://p5js.org/). I made the same game in [Processing](https://processing.org/) a while ago and then decided to put it on my webpage by converting it to p5.js.
+* `table.html`: There is a table of truth tables.
